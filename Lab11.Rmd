@@ -5,4 +5,22 @@ date: "`r Sys.Date()`"
 output: flexdashboard::flex_dashboard
 ---
 
+Column
+-------------------------------------
+
+### Component 1
+
+```{r}
+```
+
+Column
+-------------------------------------
+
+### Component 2
+
+```{r}
+```
+
+SidebarName {.sidebar}
+----------------------
 
