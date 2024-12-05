@@ -9,7 +9,7 @@ output: flexdashboard::flex_dashboard
 library(tidyverse)
 library(plotly)
 library(crosstalk)
-pokemon <- read.csv("C:/Users/이주현/OneDrive/George Mason/MK2024Fall/CDS102/24F-CDS101-lab12/Pokemon.csv")
+pokemon <- read.csv("Pokemon.csv")
 shared_pokemon <- SharedData$new(pokemon)
 ```
 
@@ -42,7 +42,7 @@ p <- shared_pokemon %>%
   ggplot() +
   geom_point(mapping=aes(
     x = Defense, y = Attack, col = Type.1),
-      data = pokemon)+
+      data = shared_pokemon)+
   labs(
     title = "Scatterpoint of Attack vs Defense by Type",
     x = "Defense",
