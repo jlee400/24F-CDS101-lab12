@@ -1,0 +1,14 @@
+---
+title: "Lab 11"
+author: "Juhyun Lee"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+
+```
+
