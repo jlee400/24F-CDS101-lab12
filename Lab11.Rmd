@@ -16,7 +16,7 @@ shared_pokemon <- SharedData$new(pokemon)
 Column
 -------------------------------------
 
-### Component 1
+### Boxplot of Total power by pokemon type
 
 ```{r}
 b <- shared_pokemon %>%
@@ -35,7 +35,7 @@ ggplotly(b)
 Column
 -------------------------------------
 
-### Component 2
+### Defense vs Attack
 
 ```{r}
 p <- shared_pokemon %>%
