@@ -44,7 +44,7 @@ p <- shared_pokemon %>%
     x = Defense, y = Attack, col = Type.1),
       data = shared_pokemon)+
   labs(
-    title = "Scatterpoint of Attack vs Defense by Type",
+    title = "Scatterplot of Attack vs Defense by Type",
     x = "Defense",
     y = "Attack"
   )+
