@@ -5,6 +5,12 @@ date: "`r Sys.Date()`"
 output: flexdashboard::flex_dashboard
 ---
 
+```{r setup, include = FALSE}
+library(tidyverse)
+library(plotly)
+library(crosstalk)
+```
+
 Column
 -------------------------------------
 
