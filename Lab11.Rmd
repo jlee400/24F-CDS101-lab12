@@ -9,6 +9,8 @@ output: flexdashboard::flex_dashboard
 library(tidyverse)
 library(plotly)
 library(crosstalk)
+pokemon <- read.csv("C:/Users/이주현/OneDrive/George Mason/MK2024Fall/CDS102/24F-CDS101-lab12/Pokemon.csv")
+shared_pokemon <- SharedData$new(pokemon)
 ```
 
 Column
@@ -17,6 +19,17 @@ Column
 ### Component 1
 
 ```{r}
+b <- shared_pokemon %>%
+  ggplot()+
+  geom_boxplot(aes(x = reorder(Type.1, Total, FUN = median), y = Total, fill = Type.1)) +
+  labs(
+    title = "Boxplot of total power of pokemon by its type",
+    x = "Pokemon Type",
+    y = "Total Power"
+  )+
+  theme(axis.text.x = element_text(angle = 45))
+
+ggplotly(b)
 ```
 
 Column
@@ -25,8 +38,25 @@ Column
 ### Component 2
 
 ```{r}
+p <- shared_pokemon %>%
+  ggplot() +
+  geom_point(mapping=aes(
+    x = Defense, y = Attack, col = Type.1),
+      data = pokemon)+
+  labs(
+    title = "Scatterpoint of Attack vs Defense by Type",
+    x = "Defense",
+    y = "Attack"
+  )+
+  theme(axis.text.x = element_text(angle = 45))
+
+ggplotly(p)
 ```
 
 SidebarName {.sidebar}
 ----------------------
+```{r}
+filter_select("poke_type", "Pokemon Type", shared_pokemon, ~ Type.1)
+```
+
 
