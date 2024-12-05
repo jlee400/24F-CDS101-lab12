@@ -53,7 +53,7 @@ p <- shared_pokemon %>%
 ggplotly(p)
 ```
 
-Choose Pokemon Type {.sidebar}
+Pokemon Type {.sidebar}
 ----------------------
 ```{r}
 filter_select("poke_type", "Pokemon Type", shared_pokemon, ~ Type.1)
